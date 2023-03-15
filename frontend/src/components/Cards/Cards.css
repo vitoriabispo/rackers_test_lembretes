@@ -1,0 +1,75 @@
+.cardContainer {
+  background-color: #C494DC;
+  border-radius: 22px;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  padding: 10px;
+}
+
+.reminderDate h3 {
+  color: #F8F8F8;
+  text-align: center;
+}
+
+.singleCard {
+  background-color: #F8F8F8;
+  border-radius: 25px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.singleCard button {
+  color: #F8F8F8;
+  font-size: 26px;
+  
+  border: none;
+  background-color: #682F7E;
+  border-radius: 50%;
+  min-height: 50px;
+  min-width: 50px;
+  transform: rotate(45deg);
+
+  cursor: pointer;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newReminder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+}
+
+.newReminder button {
+  color: #F8F8F8;
+  font-size: 26px;
+  
+  border: none;
+  background-color: #682F7E;
+  border-radius: 50%;
+  min-height: 50px;
+  min-width: 50px;
+
+  cursor: pointer;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.singleCard button:hover, 
+.newReminder button:hover  {
+  background-color: #9745b4;
+  font-size: 28px;
+  transition: .5s all;
+}

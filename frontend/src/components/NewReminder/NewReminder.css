@@ -1,0 +1,70 @@
+.containerNew{
+  background-color: #D7AEE7;
+  padding: 10px;
+  border-radius: 22px;
+
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: grid;
+  row-gap: 20px;
+}
+
+.containerNew form {
+  display: grid;
+  row-gap: 20px;
+}
+
+.reminderData {
+  background-color: #C494DC;
+  border-radius: 10px;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.reminderData label {
+  color: #F8F8F8;
+  font-size: 20px;
+  padding: 10px;
+
+}
+
+.reminderData input {
+  background-color: #F8F8F8;
+  min-width: 85%;
+  min-height: 30px;
+  border: none;
+
+  border-radius: 10px;
+  padding: 10px;
+
+  font-size: 15px;
+}
+
+.submitReminder{ 
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitReminder button {
+  color: #F8F8F8;
+  font-size: 20px;
+  
+  border: none;
+  background-color: #682F7E;
+  border-radius: 10px;
+  min-height: 50px;
+  min-width: 15%;
+
+  cursor: pointer;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.submitReminder button:hover {
+  background-color: #9745b4;
+  font-size: 23px;
+  transition: .5s all;
+}
+

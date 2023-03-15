@@ -1,0 +1,19 @@
+.containerList{
+  background-color: #D7AEE7;
+  padding: 10px;
+  border-radius: 22px;
+
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  display: grid;
+  row-gap: 20px;
+
+  max-height: 78vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.cardList {
+  display: grid;
+  row-gap: 10px;
+}
