@@ -13,7 +13,7 @@
   row-gap: 20px;
 }
 
-.reminderData {
+.reminderInfo {
   background-color: #C494DC;
   border-radius: 10px;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -24,14 +24,14 @@
 
 }
 
-.reminderData label {
+.reminderInfo label {
   color: #F8F8F8;
   font-size: 20px;
   padding: 10px;
 
 }
 
-.reminderData input {
+.reminderInfo input {
   background-color: #F8F8F8;
   min-width: 85%;
   min-height: 30px;
@@ -68,3 +68,45 @@
   transition: .5s all;
 }
 
+.errorMsg {
+  color: #682F7E;
+  text-align: end;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]:after {
+  content: "\25BC"; 
+  color: #682F7E;
+  padding: 0 5px;
+}
+
+
+input[type="date"]:hover:after {
+  color: #9745b4;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+  
+  cursor: pointer;
+}
+
+
+input[type="date"]::-webkit-inner-spin-button {
+  z-index: 1;
+}
+
+
+input[type="date"]::-webkit-clear-button {
+   z-index: 1;
+}

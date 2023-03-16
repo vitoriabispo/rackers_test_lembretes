@@ -1,23 +1,86 @@
+import React, { useState } from 'react';
+
 import './NewReminder.css';
 
+import api from "../../service/api"
+
+
 export function NewReminder() {
+  
+  const [ error, setError ] = useState('');
+  const [ date, setDate ] = useState('');
+  const [ name, setName ] = useState('');
+
+  async function onSubmit(e) {
+    e.preventDefault();
+
+    const newReminder = {
+      name: name,
+      date: date
+    };
+    if(name === '' || date === '') {
+      return setError('Todos campos devem ser preenchidos!'); 
+    }
+    try {
+      await api.post('/', newReminder);
+      setName('');
+      setDate('');
+    } catch (err) {
+      alert("Não foi possível adicionar o lembrete.");
+    }
+  }
+
+  function disableDates() {
+    var date = new Date();
+    var day = date.getDate()+1; // só pode para dias maiores que o atual
+    day = day < 10 ? '0' + day : day; 
+    var month = date.getMonth()+1;
+    month = month < 10 ? '0' + month : month; 
+    var year = date.getFullYear();
+
+    var minDate = year+"-"+month+"-"+day;
+    return minDate;
+  }
+
   return (
     <div className="containerNew">
       <div className="title">
         <h2>Novo Lembrete</h2>
       </div>
-      <form name="addReminder">
-        <div className="reminderData">
-          <label for="name">NOME</label>
-          <input type="text" id="name" name="name" placeholder="Nome do lembrete"/>
+      
+      <form className="addReminder">
+        <div className="reminderInfo">
+          <label>NOME</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Nome do lembrete"
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
         </div>
-        <div className="reminderData">
-          <label for="date">DATA</label>
-          <input type="date" id="date" name="date" placeholder="Data do lembrete (no formato dd/mm/yyyy)"/>
+        <div className="reminderInfo">
+          <label>DATA</label>
+          <input 
+            type="date" 
+            id="date" 
+            name="date"
+            value={date}
+            min={disableDates()}
+            onChange={e => setDate(e.target.value)}
+          />
         </div>
+        {error ? <p className="errorMsg">{`Erro: ${error}`}</p> : <p className="errorMsg" hidden></p>}
         <div className="submitReminder">
-          <button id="enviar" type="submit">CRIAR</button>
+          <button 
+            id="enviar" 
+            type="submit"
 
+            onClick={(e) => onSubmit(e)}
+          >
+              CRIAR
+          </button>        
         </div>
       </form>
     </div> 

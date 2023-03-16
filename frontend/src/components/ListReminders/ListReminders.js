@@ -12,8 +12,6 @@ export function ListReminders() {
         <Cards />
         <Cards />
         <Cards />
-        <Cards />
-        <Cards />
       </div>
     </div>
     

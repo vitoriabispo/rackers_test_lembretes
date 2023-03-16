@@ -16,5 +16,4 @@ export function Home() {
       </body>
     </div>
   )
-  
 }
