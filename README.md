@@ -42,4 +42,4 @@ PORT = 3333
 ---
 ## Protótipo desenvolvido
 
-Link para o figma: https://www.figma.com/file/U3WCDAgqGXJDMahSunDWNF/lembretes?node-id=0-1&t=lBBkpXWdupDPIx4K-0
+Link para o figma: https://www.figma.com/file/U3WCDAgqGXJDMahSunDWNF/rackers_test_-_trainee?node-id=0%3A1&t=5WQllctYz2YlHfgz-1

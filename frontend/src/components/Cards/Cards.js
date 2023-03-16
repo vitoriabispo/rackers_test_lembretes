@@ -12,9 +12,7 @@ export function Cards() {
         <p>atividade de teoria da computação</p>
         <button id="excluir" type="submit"><FiPlus /></button>
       </div>
-      <div className="newReminder">
-        <button id="add" type="submit"><FiPlus /></button>
-      </div>
+
     </div>
   )
 };
