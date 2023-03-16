@@ -36,9 +36,10 @@ PORT = 3333
 5. Com o repositório clonado, acessar a pasta backend e executar o comando abaixo:  
 ``` $ npm start ``` 
 
-6. Em outro terminal, acessar a pasta frontend e executar o comando abaixo: 
+6. Em outro terminal, acessar a pasta frontend e executar o comando abaixo:  
 ``` $ npm start ``` 
 
+---
 ## Protótipo desenvolvido
 
 Link para o figma: https://www.figma.com/file/U3WCDAgqGXJDMahSunDWNF/lembretes?node-id=0-1&t=lBBkpXWdupDPIx4K-0
