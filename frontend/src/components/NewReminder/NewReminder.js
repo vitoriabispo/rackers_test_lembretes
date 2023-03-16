@@ -19,10 +19,11 @@ export function NewReminder() {
       date: date
     };
     if(name === '' || date === '') {
-      return setError('Todos campos devem ser preenchidos!'); 
+      return alert('Todos campos devem ser preenchidos!'); 
     }
     try {
-      await api.post('/', newReminder);
+      await api.post('', newReminder);
+      console.log("oi");
       setName('');
       setDate('');
     } catch (err) {
@@ -71,12 +72,10 @@ export function NewReminder() {
             onChange={e => setDate(e.target.value)}
           />
         </div>
-        {error ? <p className="errorMsg">{`Erro: ${error}`}</p> : <p className="errorMsg" hidden></p>}
         <div className="submitReminder">
           <button 
             id="enviar" 
             type="submit"
-
             onClick={(e) => onSubmit(e)}
           >
               CRIAR
