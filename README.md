@@ -16,13 +16,17 @@ Repositório criado para a ferramenta de Lembretes desenvolvida no processo sele
 * Utilização de mysql2 para banco de dados
 * Utilização do docker
 * Criação de middleware para validar dados enviados por meio do formulário no backend
-* Calendário só permite escolha de datas a partir do D+1
+* Calendário só permite escolha de datas a partir do D+1 para impedir a inserção de datas fora do periodo especificado
 
 ---
 ## Instruções de execução
 1. Clonar o repositório por meio de  
 ``` $ git clone https://github.com/vitoriabispo/rackers_test_lembretes.git ``` 
-2. Criação de um arquivo .env (exemplo abaixo):
+2. Dentro da pasta do repositório, executar o comando abaixo:
+
+``` $ yarn install ``` 
+
+3. Criação de um arquivo .env (exemplo abaixo):
 
 ```  
 HOST = localhost
@@ -32,11 +36,10 @@ DATABASE = reminders
 PORT = 3333 
 ``` 
 3. Criar um banco de dados com o mesmo nome inserido no .env
-4. Instalar Node, NPM, React
-5. Com o repositório clonado, acessar a pasta backend e executar o comando abaixo:  
+4. Com o repositório clonado, acessar a pasta backend e executar o comando abaixo:  
 ``` $ npm start ``` 
 
-6. Em outro terminal, acessar a pasta frontend e executar o comando abaixo:  
+5. Em outro terminal, acessar a pasta frontend e executar o comando abaixo:  
 ``` $ npm start ``` 
 
 ---
