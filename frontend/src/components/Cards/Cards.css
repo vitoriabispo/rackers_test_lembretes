@@ -15,6 +15,8 @@
   background-color: #E9D4F1;
   border-radius: 25px;
   
+  margin-bottom: 5px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,3 +75,4 @@
   font-size: 28px;
   transition: .5s all;
 }
+

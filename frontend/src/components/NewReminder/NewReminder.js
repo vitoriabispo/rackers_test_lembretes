@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
 
 import './NewReminder.css';
+import transformData from "../../utils/transformData"
+
 
 import api from "../../service/api"
+import groupBy from "../../utils/groupBy"
+import orderList from "../../utils/orderList"
 
 
-export function NewReminder() {
+export function NewReminder({ reminders, setReminders }) {
   
-  const [ error, setError ] = useState('');
   const [ date, setDate ] = useState('');
   const [ name, setName ] = useState('');
 
   async function onSubmit(e) {
     e.preventDefault();
 
-    const newReminder = {
-      name: name,
-      date: date
-    };
+    
     if(name === '' || date === '') {
       return alert('Todos campos devem ser preenchidos!'); 
     }
     try {
-      await api.post('', newReminder);
-      console.log("oi");
+      await api.post('', {name, date});
+      const res = await api.get('/');
+      const groupedArray = groupBy(res.data, "date");
+      setReminders(orderList(transformData(groupedArray)));
       setName('');
       setDate('');
     } catch (err) {
@@ -78,7 +80,7 @@ export function NewReminder() {
             type="submit"
             onClick={(e) => onSubmit(e)}
           >
-              CRIAR
+            CRIAR
           </button>        
         </div>
       </form>
